@@ -11,16 +11,23 @@ package model;
  */
 public class Document {
     private int id;
-    private int killyourself;
     private String content;
 
     public Document() {
     }
 
-    public Document(String content) {
+    public Document(int id, String content) {
+        this.id = id;
         this.content = content;
     }
+    
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     /**
      * @return the content
      */
