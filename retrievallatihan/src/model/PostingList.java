@@ -6,25 +6,29 @@
 package model;
 
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
+import java.util.function.UnaryOperator;
+
+
 
 /**
  *
  * @author admin
  */
-public class invertextIndex {
-    private List<Term_Kata> dictionary = new List<Term_Kata>() {
+public class PostingList {
+    private List<Posting> postingList = new List<Posting>() {
         @Override
-        public Spliterator<Term_Kata> spliterator() {
+        public Spliterator<Posting> spliterator() {
             return List.super.spliterator(); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public void forEach(Consumer<? super Term_Kata> action) {
+        public void forEach(Consumer<? super Posting> action) {
             List.super.forEach(action); //To change body of generated methods, choose Tools | Templates.
         }
 
@@ -44,7 +48,7 @@ public class invertextIndex {
         }
 
         @Override
-        public Iterator<Term_Kata> iterator() {
+        public Iterator<Posting> iterator() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
@@ -59,7 +63,7 @@ public class invertextIndex {
         }
 
         @Override
-        public boolean add(Term_Kata e) {
+        public boolean add(Posting e) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
@@ -74,12 +78,12 @@ public class invertextIndex {
         }
 
         @Override
-        public boolean addAll(Collection<? extends Term_Kata> c) {
+        public boolean addAll(Collection<? extends Posting> c) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public boolean addAll(int index, Collection<? extends Term_Kata> c) {
+        public boolean addAll(int index, Collection<? extends Posting> c) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
@@ -94,27 +98,37 @@ public class invertextIndex {
         }
 
         @Override
+        public void replaceAll(UnaryOperator<Posting> operator) {
+            List.super.replaceAll(operator); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
+        public void sort(Comparator<? super Posting> c) {
+            List.super.sort(c); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        @Override
         public void clear() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public Term_Kata get(int index) {
+        public Posting get(int index) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public Term_Kata set(int index, Term_Kata element) {
+        public Posting set(int index, Posting element) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public void add(int index, Term_Kata element) {
+        public void add(int index, Posting element) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public Term_Kata remove(int index) {
+        public Posting remove(int index) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
@@ -129,19 +143,20 @@ public class invertextIndex {
         }
 
         @Override
-        public ListIterator<Term_Kata> listIterator() {
+        public ListIterator<Posting> listIterator() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public ListIterator<Term_Kata> listIterator(int index) {
+        public ListIterator<Posting> listIterator(int index) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
-        public List<Term_Kata> subList(int fromIndex, int toIndex) {
+        public List<Posting> subList(int fromIndex, int toIndex) {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     };
-    
 }
+            
+   
